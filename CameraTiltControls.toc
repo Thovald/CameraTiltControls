@@ -1,0 +1,15 @@
+## Interface: 110205
+## Version: v1.0.0-beta.1
+## Title: CameraTiltControls
+## Notes: Exposes some settings to tilt the camera upwards.|n|n/ctc or /cameratiltcontrols
+## Author: Thovald
+## IconTexture: Interface\AddOns\CameraTiltControls\Media\Icon.tga
+## SavedVariables: CameraTiltControlsDB
+## X-Curse-Project-ID: 1379070
+## X-Wago-ID: VBNBxKx5
+
+embeds.xml
+Locales/Locales.xml
+
+Core.lua
+Options.lua
