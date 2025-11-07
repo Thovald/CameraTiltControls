@@ -1,5 +1,5 @@
 ## Interface: 110205
-## Version: v1.0.0-beta.1
+## Version: v1.0.0
 ## Title: CameraTiltControls
 ## Notes: Exposes some settings to tilt the camera upwards.|n|n/ctc or /cameratiltcontrols
 ## Author: Thovald
