@@ -6,7 +6,7 @@
 ## IconTexture: Interface\AddOns\CameraTiltControls\Media\Icon.tga
 ## SavedVariables: CameraTiltControlsDB
 ## X-Curse-Project-ID: 1379070
-## X-Wago-ID: VBNBxKx5
+## X-Wago-ID: YK9EReKL
 
 embeds.xml
 Locales/Locales.xml
