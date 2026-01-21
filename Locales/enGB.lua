@@ -1,6 +1,5 @@
-local debug = false --@debug@ debug = true --@end-debug@ 
+local debug = false
 local L = LibStub("AceLocale-3.0"):NewLocale("CameraTiltControls", "enGB", true)
---@localization(locale="enGB", format="lua_additive_table", same-key-is-true=false, handle-subnamespaces="none")@
 
 L["tabName_settings"] = "Settings"
 L["description_main"] = "Allows you to tilt the camera upwards.|n|nNormally the camera is pointed at your character's head.|nTilting it up means it will now point at an imaginary point above your character.|n|nThis will provide you with a better with of what's in front, but your character will appear lower on your screen."
