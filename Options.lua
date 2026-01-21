@@ -127,7 +127,6 @@ SlashCmdList["CAMERATILT"] = function()
     end
 end
 
--- To make it resizable and set size:
 AceConfigDialog:SetDefaultSize("CameraTiltControls", 600, 400)
 
 end

@@ -13,6 +13,7 @@ local config = Private.config
 main.frame = CreateFrame("Frame", "AutoSummonBattlePetFrame")
 main.frame:RegisterEvent("ADDON_LOADED")
 main.frame:RegisterEvent("PLAYER_LOGIN")
+main.frame:RegisterEvent("CVAR_UPDATE")
 
 ------------------
 -- Applying Settings
@@ -20,7 +21,17 @@ main.frame:RegisterEvent("PLAYER_LOGIN")
 function main.ApplySetting(name)
     if name == "enabled" or name == "all" then
         SetCVar("test_cameraDynamicPitch", db.enabled)
-        if not db.enabled then return end
+
+        -- the "CameraKeepCharacterCentered" CVar needs to be disabled for the camera to update.
+        -- however, this CVar is also controlled by the "Motion Sickness" setting.
+        -- if user disables the camera tilt, we don't want to also disable this setting if user has "Motion Sickness" enabled.
+        if not db.enabled then
+            local isMotionSicknessEnabled = GetCVar("CameraReduceUnexpectedMovement")
+            SetCVar("CameraKeepCharacterCentered", isMotionSicknessEnabled)
+            return
+        else
+            SetCVar("CameraKeepCharacterCentered", false)
+        end
     end
 
     if name == "angle" or name == "all" then
@@ -74,6 +85,12 @@ local function OnLogin()
     main.ApplySetting("all")
 end
 
+local function OnCVarUpdate(cvar)
+    if cvar == "CameraKeepCharacterCentered" then
+        main.ApplySetting("enabled")
+    end
+end
+
 ------------------
 -- Event Handler
 ------------------
@@ -81,6 +98,7 @@ end
 local eventHandler = {
     ["ADDON_LOADED"] = InitDB,
     ["PLAYER_LOGIN"] = OnLogin,
+    ["CVAR_UPDATE"] = OnCVarUpdate,
 }
 
 function main.frame:OnEvent(event, ...)
