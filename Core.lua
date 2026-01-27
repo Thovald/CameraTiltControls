@@ -69,8 +69,6 @@ local function InitDB(addOnName)
     }
 
     Private.db = LibStub("AceDB-3.0"):New("CameraTiltControlsDB", defaults, true)
-
-    Private.db.profile.enabled = Private.db.profile.enabled
     db = Private.db.profile
 
     Private.db.RegisterCallback(Private, "OnProfileChanged", "OnProfileChanged")
