@@ -12,4 +12,3 @@ L["sliderName_angleSkyriding"] = "Angle (Skyriding)"
 L["sliderDescr_angleSkyriding"] = "Angle of the tilt when Skyriding."
 L["sliderName_topDownStrength"] = "Top-Down Strength"
 L["sliderDescr_topDownStrength"] = "This reduces the tilt as you move the camera closer to a top-down view.|n|nSet this to 0 if you want your character to be centered when looking from above."
-

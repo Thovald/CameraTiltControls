@@ -12,4 +12,3 @@ L["sliderName_angleSkyriding"] = "Winkel (Himmelsreiten)"
 L["sliderDescr_angleSkyriding"] = "Winkel der Neigung während Himmelsreiten."
 L["sliderName_topDownStrength"] = "Draufsicht Stärke"
 L["sliderDescr_topDownStrength"] = "Reduziert die Stärke der Neigung je mehr sich die Kamera einer Draufsicht nähert.|n|nStelle dies auf 0 wenn du möchtest, dass dein Charakter bei einer Draufsicht mittig erscheint."
-
