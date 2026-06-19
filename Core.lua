@@ -14,6 +14,7 @@ main.frame = CreateFrame("Frame", "AutoSummonBattlePetFrame")
 main.frame:RegisterEvent("ADDON_LOADED")
 main.frame:RegisterEvent("PLAYER_LOGIN")
 main.frame:RegisterEvent("CVAR_UPDATE")
+main.frame:RegisterEvent("FIRST_FRAME_RENDERED")
 
 ------------------
 -- Applying Settings
@@ -89,6 +90,10 @@ local function OnCVarUpdate(cvar)
     end
 end
 
+local function HidePopup()
+    StaticPopup_Hide("EXPERIMENTAL_CVAR_WARNING")
+end
+
 ------------------
 -- Event Handler
 ------------------
@@ -97,6 +102,7 @@ local eventHandler = {
     ["ADDON_LOADED"] = InitDB,
     ["PLAYER_LOGIN"] = OnLogin,
     ["CVAR_UPDATE"] = OnCVarUpdate,
+    ["FIRST_FRAME_RENDERED"] = HidePopup,
 }
 
 function main.frame:OnEvent(event, ...)
